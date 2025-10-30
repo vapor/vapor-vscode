@@ -8,13 +8,13 @@ You can also use this extension when running VS Code in the browser to have Leaf
 
 *   💧 Create new Vapor projects
 
-    <img src="https://raw.githubusercontent.com/vapor-community/vapor-vscode/main/images/createNewProject.png" width="260" height="200">
+    <img src="https://raw.githubusercontent.com/vapor/vapor-vscode/main/images/createNewProject.png" width="260" height="200">
 
 *   🍃 Language support and formatter for the Leaf templating language
 
-    <img src="https://raw.githubusercontent.com/vapor-community/vapor-vscode/main/images/leafHighlighting.png" width="630" height="430">
+    <img src="https://raw.githubusercontent.com/vapor/vapor-vscode/main/images/leafHighlighting.png" width="630" height="430">
 
-    <img src="https://raw.githubusercontent.com/vapor-community/vapor-vscode/main/images/leafFormatting.gif" width="630" height="430">
+    <img src="https://raw.githubusercontent.com/vapor/vapor-vscode/main/images/leafFormatting.gif" width="630" height="430">
 
 *   ✏️ Code snippets for common Vapor, Fluent, and Leaf code patterns
 

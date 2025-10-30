@@ -2,7 +2,7 @@
   "name": "vapor-vscode",
   "displayName": "Vapor for VS Code",
   "description": "Vapor web framework support for Visual Studio Code.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "Vapor",
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vapor-community/vapor-vscode"
+    "url": "https://github.com/vapor/vapor-vscode"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/vapor"
@@ -19,13 +19,13 @@
   "homepage": "https://www.vapor.codes",
   "badges": [
     {
-      "url": "https://img.shields.io/github/actions/workflow/status/vapor-community/vapor-vscode/test.yml?event=push&style=plastic&logo=github&label=tests&logoColor=%23ccc",
-      "href": "https://github.com/vapor-community/vapor-vscode/actions/workflows/test.yml",
+      "url": "https://img.shields.io/github/actions/workflow/status/vapor/vapor-vscode/test.yml?event=push&style=plastic&logo=github&label=tests&logoColor=%23ccc",
+      "href": "https://github.com/vapor/vapor-vscode/actions/workflows/test.yml",
       "description": "Continuous Integration"
     },
     {
-      "url": "https://img.shields.io/codecov/c/github/vapor-community/vapor-vscode?style=plastic&logo=codecov&label=codecov",
-      "href": "https://codecov.io/github/vapor-community/vapor-vscode",
+      "url": "https://img.shields.io/codecov/c/github/vapor/vapor-vscode?style=plastic&logo=codecov&label=codecov",
+      "href": "https://codecov.io/github/vapor/vapor-vscode",
       "description": "Code Coverage"
     }
   ],
@@ -173,6 +173,67 @@
         "view": "explorer",
         "contents": "You can also create a new Vapor project.\n[Create Vapor Project](command:vapor-vscode.createNewProject)",
         "when": "workspaceFolderCount == 0"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "vapor-welcome",
+        "title": "Get Started with Vapor for VS Code",
+        "description": "Learn how to use the Vapor extension for VS Code.",
+        "steps": [
+          {
+            "id": "installing-toolbox-mac",
+            "title": "Install Vapor Toolbox",
+            "description": "This extension requires the Vapor Toolbox to be installed on your system for project creation.\nOn macOS, the Toolbox is distributed via Homebrew.",
+            "media": {
+              "markdown": "./assets/walkthrough/welcome.md"
+            },
+            "when": "isMac"
+          },
+          {
+            "id": "installing-toolbox-linux",
+            "title": "Install Vapor Toolbox",
+            "description": "This extension requires the Vapor Toolbox to be installed on your system for project creation.\nOn Linux, the Toolbox is distributed via Homebrew.",
+            "media": {
+              "markdown": "./assets/walkthrough/welcome.md"
+            },
+            "when": "isLinux"
+          },
+          {
+            "id": "creating-new-project",
+            "title": "Create a Vapor project",
+            "description": "You can create a new Vapor project with \n``Vapor: Create New Project``\n in the Command Palette. \n[Try it out](command:vapor-vscode.createNewProject)",
+            "media": {
+              "markdown": "assets/walkthrough/createNewProject.md"
+            }
+          },
+          {
+            "id": "leaf-syntax-highlighting",
+            "title": "Leaf Syntax Highlighting",
+            "description": "When you open a ``.leaf`` file the extension will activate automatically and the file will have proper syntax highlighting for Leaf tags, added on top of existing HTML syntax highlighting.\nThis feature is available both in local and browser-based VS Code.",
+            "media": {
+              "image": "./images/leafHighlighting.png",
+              "altText": "Leaf Syntax Highlighting"
+            }
+          },
+          {
+            "id": "leaf-formatting",
+            "title": "Leaf Formatting",
+            "description": "You can format your Leaf files with \n``Format Document``\n in the Command Palette. \nThis will ensure that your templates are consistent, with the proper indentation and spacing for both Leaf and HTML tags. \nYou can also format just a selected portion of the file using the ``Format Selection`` command and enable the ``Format on Save`` option in VS Code settings.",
+            "media": {
+              "image": "./images/leafFormatting.gif",
+              "altText": "Leaf Formatting"
+            }
+          },
+          {
+            "id": "snippets",
+            "title": "Snippets",
+            "description": "The extension includes a collection of snippets for common Vapor, Fluent, and Leaf constructs, such as Vapor endpoints and middleware, Fluent models and migrations, and Leaf default tags and control flow statements. \nSnippets will appear as IntelliSense suggestions as you type a snippet prefix in a Swift or Leaf file, or you can search for them using the ``Insert Snippet`` command in the Command Palette.",
+            "media": {
+              "markdown": "./assets/walkthrough/snippets.md"
+            }
+          }
+        ]
       }
     ]
   },

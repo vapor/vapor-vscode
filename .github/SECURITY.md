@@ -13,7 +13,7 @@ _Legend_:
 
 ## Private Disclosure Process
 
-The Vapor Core Team ask that known and suspected vulnerabilities be privately and responsibly disclosed by [filling out a vulnerability report](https://github.com/vapor-community/vapor-vscode/security/advisories/new) on Github[^1]. Vulnerabilities may also be privately and responsibly disclosed by emailing all pertinent information to [security@vapor.codes](mailto:security@vapor.codes).
+The Vapor Core Team ask that known and suspected vulnerabilities be privately and responsibly disclosed by [filling out a vulnerability report](https://github.com/vapor/vapor-vscode/security/advisories/new) on Github[^1]. Vulnerabilities may also be privately and responsibly disclosed by emailing all pertinent information to [security@vapor.codes](mailto:security@vapor.codes).
 
 [^1]: See [Github's official documentation of the vulnerability report feature](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) for additional privacy and safety details.
 
