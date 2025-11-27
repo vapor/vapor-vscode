@@ -2,7 +2,7 @@
   "name": "vapor-vscode",
   "displayName": "Vapor for VS Code",
   "description": "Vapor web framework support for Visual Studio Code.",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "publisher": "Vapor",
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -46,7 +46,6 @@
     "server",
     "framework"
   ],
-  "preview": true,
   "activationEvents": [
     "onLanguage:swift",
     "workspaceContains:Package.swift"
