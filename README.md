@@ -8,7 +8,7 @@ You can also use this extension when running VS Code in the browser to have Leaf
 
 *   💧 Create new Vapor projects
 
-    <img src="https://raw.githubusercontent.com/vapor/vapor-vscode/main/images/createNewProject.png" width="260" height="200">
+    <img src="https://raw.githubusercontent.com/vapor/vapor-vscode/main/assets/walkthrough/images/createNewProject.png" width="260" height="200">
 
 *   🍃 Language support and formatter for the Leaf templating language
 
