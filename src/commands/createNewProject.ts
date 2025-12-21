@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import * as fs from "fs/promises";
+import * as fs from "node:fs/promises";
 import { execVapor } from "../utilities/utilities";
 import { promptForVariables, buildDynamicFlags } from "./manifestVariables";
 
@@ -65,7 +65,7 @@ export async function createNewProject() {
 			location: vscode.ProgressLocation.Notification,
 			title: `Creating Vapor project ${projectName}`,
 			cancellable: false
-		}, async (progress, token) => {
+		}, async (progress) => {
 			progress.report({ increment: 0, message: "Collecting template variables..." });
 			const variablesJSONOutput = await execVapor([projectName, "--dump-variables", ...buildFlags], { cwd: folderUri.fsPath });
 			const variablesJSON = JSON.parse(variablesJSONOutput.stdout);
@@ -102,7 +102,7 @@ export async function createNewProject() {
     } else if (openAfterCreate === "whenNoFolderOpen" && !isWorkspaceOpened) {
         action = "open";
     }
-    
+
 	if (action === undefined) {
         let message = `Would you like to open ${projectName}?`;
         const open = "Open";

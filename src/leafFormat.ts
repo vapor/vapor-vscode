@@ -1,5 +1,5 @@
-import * as vscode from "vscode";
 import beautify from "js-beautify";
+import * as vscode from "vscode";
 
 export class LeafFormatter implements vscode.DocumentFormattingEditProvider, vscode.DocumentRangeFormattingEditProvider {
     provideDocumentFormattingEdits(
@@ -28,7 +28,7 @@ export class LeafFormatter implements vscode.DocumentFormattingEditProvider, vsc
 
         const preFormatted = leafPreFormat(text);
         const htmlFormatted = beautify.html(preFormatted, formatterOptions);
-        const postFormatted = leafPostFormat(htmlFormatted, indent, width);
+        const postFormatted = leafPostFormat(htmlFormatted, indent);
 
         return [new vscode.TextEdit(range, postFormatted)];
     }
@@ -56,7 +56,7 @@ export class LeafFormatter implements vscode.DocumentFormattingEditProvider, vsc
 
         const preFormatted = leafPreFormat(text);
         const htmlFormatted = beautify.html(preFormatted, formatterOptions);
-        const postFormatted = leafPostFormat(htmlFormatted, indent, width);
+        const postFormatted = leafPostFormat(htmlFormatted, indent);
 
         return [new vscode.TextEdit(range, postFormatted)];
     }
@@ -86,8 +86,8 @@ export class LeafFormatter implements vscode.DocumentFormattingEditProvider, vsc
 
             const preFormatted = leafPreFormat(text);
             const htmlFormatted = beautify.html(preFormatted, formatterOptions);
-            const postFormatted = leafPostFormat(htmlFormatted, indent, width);
-            
+            const postFormatted = leafPostFormat(htmlFormatted, indent);
+
             edits.push(new vscode.TextEdit(range, postFormatted));
         }
         return edits;
@@ -159,7 +159,7 @@ export function leafPreFormat(html: string): string {
  *
  * @returns The formatted HTML.
  */
-export function leafPostFormat(html: string, indent: string, width: number): string {
+export function leafPostFormat(html: string, indent: string): string {
     const lines = html.split("\n");
     const result: string[] = [];
     let leafIndentLevel = 0; // Indicates the number of Leaf tags that are open

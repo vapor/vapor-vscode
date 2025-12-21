@@ -73,7 +73,26 @@
       {
         "language": "leaf",
         "scopeName": "text.html.leaf",
+        "embeddedLanguages": {
+          "text.html": "html",
+          "text.xml": "xml",
+          "source.js": "javascript",
+          "source.css": "css"
+        },
+        "tokenTypes": {
+          "meta.embedded.tag.leaf.for": "other",
+          "meta.embedded.tag.leaf": "other",
+          "meta.embedded.tag.leaf.simple": "other",
+          "meta.embedded.tag.leaf.nested": "other",
+          "meta.embedded.definition.function.body.leaf": "other"
+        },
         "path": "./syntaxes/leaf.tmLanguage.json"
+      }
+    ],
+    "htmlLanguageParticipants": [
+      {
+        "languageId": "leaf",
+        "autoInsert": true
       }
     ],
     "snippets": [

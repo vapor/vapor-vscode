@@ -1,5 +1,4 @@
 import * as vscode from "vscode";
-import { deactivate } from "../extension";
 
 interface PromptResponse {
     [key: string]: any;
@@ -83,7 +82,7 @@ export function buildDynamicFlags(responses: PromptResponse, prefix = ""): strin
     const flags: string[] = [];
 
     for (const key in responses) {
-        if (responses.hasOwnProperty(key)) {
+        if (Object.hasOwn(responses, key)) {
             const flagName = prefix ? `${prefix}.${key}` : key;
             const value = responses[key];
 
