@@ -80,11 +80,7 @@
           "source.css": "css"
         },
         "tokenTypes": {
-          "meta.embedded.tag.leaf.for": "other",
-          "meta.embedded.tag.leaf": "other",
-          "meta.embedded.tag.leaf.simple": "other",
-          "meta.embedded.tag.leaf.nested": "other",
-          "meta.embedded.definition.function.body.leaf": "other"
+          "meta.tag string.quoted": "other"
         },
         "path": "./syntaxes/leaf.tmLanguage.json"
       }
