@@ -1,4 +1,4 @@
-import * as cp from "child_process";
+import * as cp from "node:child_process";
 
 /**
  * Asynchronous wrapper around {@link cp.execFile child_process.execFile}.
@@ -31,7 +31,7 @@ export async function execFile(
 /**
  * Asynchronous wrapper around {@link cp.execFile child_process.execFile} running
  * Vapor Toolbox.
- * 
+ *
  * @param args array of arguments to pass to Vapor Toolbox
  * @param options execution options
  */

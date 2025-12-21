@@ -27,7 +27,7 @@ suite("Vapor Extension Test Suite", () => {
 		try {
 			await execFile("ls", ["-l", "/nonexistent"]);
 			assert.fail("Expected execFile to throw an error for an invalid command.");
-		} catch (error) {}
+		} catch {}
 	});
 
 	test("Leaf Formatter", () => {
@@ -59,8 +59,8 @@ suite("Vapor Extension Test Suite", () => {
 			"#endif";
 
 		assert.strictEqual(preFormatted, expectedPreFormatted, "Pre formatted HTML does not match expected output.");
-	
-		const postFormatted = leafPostFormat(preFormatted, "    ", 80);
+
+		const postFormatted = leafPostFormat(preFormatted, "    ");
 		const expectedPostFormatted = [
 			"<h1>Hello, World!</h1><p>This is a test.</p>",
 			"#if(bool):",
@@ -82,7 +82,7 @@ suite("Vapor Extension Test Suite", () => {
 			"    #endif",
 			"#endif",
 		].join("\n");
-	
+
 		assert.strictEqual(postFormatted, expectedPostFormatted, "Post formatted HTML does not match expected output.");
 	});
 
