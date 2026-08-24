@@ -97,5 +97,15 @@
                 }
             ]
         }
-    }
+    },
+    "injections": {
+        "L:text.html.leaf": {
+            "patterns": [
+                {
+                    "include": "#tags"
+                }
+            ]
+        }
+    },
+    "fileTypes": ["leaf"]
 }
