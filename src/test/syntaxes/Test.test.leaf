@@ -37,3 +37,16 @@
 
     #endexport
 #endextend
+
+<ul>
+#for(index, planet in planets):
+#comment: ^ - variable.leaf
+#endcomment
+    <li>#(index + 1) #(planet)</li>
+    #for(subIndex, moon in moons):
+#comment:               ^^ keyword.control.leaf.in
+#endcomment
+        <li>#(subIndex + 1) #(moon)</li>
+    #endfor
+#endfor
+</ul>
