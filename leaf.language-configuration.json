@@ -15,8 +15,9 @@
     ],
     "folding": {
         "markers": {
-            "start": "^\\s*<!--\\s*#region\\b.*-->",
-            "end": "^\\s*<!--\\s*#endregion\\b.*-->"
+            "start": "^\\s*(<!--\\s*#region\\b.*-->|#comment:\\s*(\\\\)*#region\\b.*#endcomment)",
+            "end": "^\\s*(<!--\\s*#endregion\\b.*-->|#comment:\\s*(\\\\)*#endregion\\b.*#endcomment)"
         }
-    }
+    },
+    "wordPattern": "(-?\\d*\\.\\d\\w*)|([^\\`\\~\\!\\@\\$\\^\\&\\*\\(\\)\\=\\+\\[\\{\\]\\}\\\\\\|\\;\\:\\'\\\"\\,\\.\\<\\>\\/\\s]+)"
 }

@@ -3,10 +3,50 @@
     "name": "Leaf",
     "scopeName": "text.html.leaf",
     "patterns": [
+        { "include": "#comments" },
         { "include": "#tags" },
-        { "include": "text.html.basic" }
+        { "include": "#embedded" }
     ],
+    "injections": {
+        "L:meta.embedded.block.html, L:text.html.basic": {
+            "patterns": [
+                { "include": "#comments" },
+                { "include": "#tags" }
+            ]
+        }
+    },
     "repository": {
+        "embedded": {
+            "name": "meta.embedded.block.html",
+            "begin": "(?!#)",
+            "end": "(?=#)",
+            "patterns": [
+                { "include": "text.html.basic" }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.inline.leaf",
+                    "match": "(#comment:).*(#endcomment)\\b",
+                    "captures": {
+                        "1": { "name": "punctuation.definition.comment.leaf" },
+                        "2": { "name": "punctuation.definition.comment.leaf" }
+                    }
+                },
+                {
+                    "name": "comment.block.leaf",
+                    "begin": "#comment:",
+                    "beginCaptures": {
+                        "0": { "name": "punctuation.definition.comment.leaf" }
+                    },
+                    "end": "#endcomment\\b",
+                    "endCaptures": {
+                        "0": { "name": "punctuation.definition.comment.leaf" }
+                    }
+                }
+            ]
+        },
         "tags": {
             "patterns": [
                 {
@@ -94,15 +134,6 @@
                 {
                     "name": "variable.leaf",
                     "match": "\\b[A-Za-z0-9_$][\\w$]*\\b"
-                }
-            ]
-        }
-    },
-    "injections": {
-        "L:text.html.leaf": {
-            "patterns": [
-                {
-                    "include": "#tags"
                 }
             ]
         }
