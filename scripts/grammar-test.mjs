@@ -41,7 +41,7 @@ try {
 	process.exit(1);
 }
 
-const grammarTest = join(workspace, "node_modules", "vscode-tmgrammar-test", "dist", "unit.js");
+const grammarTest = join(workspace, "node_modules", "textmate-grammar-test", "dist", "unit.js");
 const result = spawnSync(process.execPath, [
 	grammarTest,
 	...grammarPaths.flatMap((grammarPath) => ["-g", grammarPath]),

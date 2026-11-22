@@ -1,4 +1,4 @@
-#comment: SYNTAX TEST "text.html.leaf"
+#comment: SYNTAX TEST v1 "text.leaf"
 #endcomment
 
 #extend("template"):
@@ -10,7 +10,7 @@
 #endcomment
 
         #comment:
-#comment: <~~~~~~~~~------- entity.name.tag.leaf
+#comment: <~~~~~~~~~------- punctuation.definition.comment.leaf
 #endcomment
             Welcome to the Vapor VSCode extension!
         #endcomment
@@ -39,8 +39,8 @@
 #endextend
 
 <ul>
-#for(index, planet in planets):
-#comment: ^ - variable.leaf
+ #for(index, planet in planets):
+#comment: ^ variable.leaf
 #endcomment
     <li>#(index + 1) #(planet)</li>
     #for(subIndex, moon in moons):
