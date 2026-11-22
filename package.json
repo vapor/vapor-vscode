@@ -2,7 +2,7 @@
   "name": "vapor-vscode",
   "displayName": "Vapor for VS Code",
   "description": "Vapor web framework support for Visual Studio Code.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "Vapor",
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -72,8 +72,11 @@
     "grammars": [
       {
         "language": "leaf",
-        "scopeName": "text.html.leaf",
-        "path": "./syntaxes/leaf.tmLanguage.json"
+        "scopeName": "text.leaf",
+        "path": "./syntaxes/leaf.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.html": "html"
+        }
       }
     ],
     "htmlLanguageParticipants": [
@@ -168,11 +171,6 @@
         }
       }
     ],
-    "configurationDefaults": {
-      "emmet.includeLanguages": {
-        "leaf": "html"
-      }
-    },
     "viewsWelcome": [
       {
         "view": "explorer",
@@ -251,7 +249,6 @@
     "grammar-test": "node scripts/grammar-test.mjs",
     "compile": "npm run check-types && npm run lint && node esbuild.js",
     "check-types": "tsc --noEmit",
-    "watch": "npm-run-all -p watch:*",
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
     "vscode:prepublish": "npm run package",
@@ -265,15 +262,23 @@
     "@types/vscode": "^1.96.2",
     "@typescript-eslint/eslint-plugin": "^8.67.0",
     "@typescript-eslint/parser": "^8.67.0",
-    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-cli": "^0.0.15",
     "@vscode/test-electron": "^3.1.0",
     "esbuild": "^0.28.2",
     "eslint": "^10.9.0",
-    "npm-run-all": "^4.1.5",
     "typescript": "^6.0.3",
     "vscode-tmgrammar-test": "^0.1.3"
   },
   "dependencies": {
     "js-beautify": "^2.0.3"
+  },
+  "overrides": {
+    "diff": "^9.0.0",
+    "glob": "^14.0.0",
+    "minimatch": "^11.0.1",
+    "serialize-javascript": "^7.1.4"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
