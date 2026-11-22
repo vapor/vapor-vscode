@@ -1,4 +1,4 @@
-#comment: SYNTAX TEST v1 "text.leaf"
+#comment: SYNTAX TEST v1 "text.html.leaf"
 #endcomment
 
 #extend("template"):

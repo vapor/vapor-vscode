@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Improved syntax highlighting of Leaf comments.
+- HTML content is now correctly placed under the HTML language scope.
 
 ## [1.0.0] - 2025-11-27
 

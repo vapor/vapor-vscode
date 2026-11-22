@@ -1,13 +1,29 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Leaf",
-    "scopeName": "text.leaf",
+    "scopeName": "text.html.leaf",
     "patterns": [
         { "include": "#comments" },
         { "include": "#tags" },
-        { "include": "text.html.basic" }
+        { "include": "#embedded" }
     ],
+    "injections": {
+        "L:meta.embedded.block.html, L:text.html.basic": {
+            "patterns": [
+                { "include": "#comments" },
+                { "include": "#tags" }
+            ]
+        }
+    },
     "repository": {
+        "embedded": {
+            "name": "meta.embedded.block.html",
+            "begin": "(?!#)",
+            "end": "(?=#)",
+            "patterns": [
+                { "include": "text.html.basic" }
+            ]
+        },
         "comments": {
             "patterns": [
                 {

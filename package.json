@@ -72,10 +72,10 @@
     "grammars": [
       {
         "language": "leaf",
-        "scopeName": "text.leaf",
+        "scopeName": "text.html.leaf",
         "path": "./syntaxes/leaf.tmLanguage.json",
         "embeddedLanguages": {
-          "text.html": "html"
+          "meta.embedded.block.html": "html"
         }
       }
     ],
